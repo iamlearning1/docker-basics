@@ -48,15 +48,17 @@ docker inspect [name of volume]
 
 # run a container on volume
 
-docker run -d -p 8000:3000 --name [container name] --volume [volume name]:/[directory name][name of image]
+docker run -d -p 8000:3000 --name [container name] --volume [volume name]:/[directory name] [name of image]
 
-windows>docker run -d -p 8000:3000 --name [container name] --volume %c%d:/[directory name][name of image]
+## windows
+>docker run -d -p 8000:3000 --name [container name] --volume %c%d:/[directory name] [name of image]
 
-linux>docker run -d -p 8000:3000 --name [container name] --volume \$(pwd):/[directory name][name of image]
+## linux
+>docker run -d -p 8000:3000 --name [container name] --volume \$(pwd):/[directory name] [name of image]
 
 or
 
-> docker run -d -p 8000:3000 --name [container name] --volume "\$(pwd)":/[directory name][name of image]
+> docker run -d -p 8000:3000 --name [container name] --volume "\$(pwd)":/[directory name] [name of image]
 
 # open container in debug mode
 
