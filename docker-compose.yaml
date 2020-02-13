@@ -1,0 +1,21 @@
+version: "3.3"
+services:
+  testing:
+    build: .
+    # context: ./docker-basics
+    ports:
+      - "3000:3000"
+    environment:
+      - test=test_value
+    volumes:
+      - type: bind
+        source: $HOME/Documents/docker-basics
+        target: /app
+volumes:
+  my-volume:
+# product-db:
+#   image: mysql
+#   environment:
+#     - MYSQL_ROOT_PASSWORD=complexpassword
+#   ports:
+#     - 8002:3306

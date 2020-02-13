@@ -65,3 +65,19 @@ or
 # open container in debug mode
 
 docker exec -it [container name] bash
+
+# build using docker-compose
+
+docker-compose build
+
+# start the docker-compose container
+
+docker-compose up -d
+
+# bring docker-compose down
+
+docker-compose down
+
+# stop docker-compose container
+
+docker-compose stop
